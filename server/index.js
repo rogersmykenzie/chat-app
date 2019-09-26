@@ -9,7 +9,7 @@ const massive = require("massive");
 let messages = [];
 let db = null;
 
-massive(`postgres://wssojhwftczjth:318e62586d5fea3946dd34eb44acfc1c4931f1acd997e198cb3c96e76b9c1e83@ec2-174-129-227-128.compute-1.amazonaws.com:5432/dchrtmlau4ctnd?ssl=true`).then(dbInstance => {
+massive(process.env.CONNECTION_STRING).then(dbInstance => {
     db = dbInstance;
 })
 
